@@ -4,8 +4,10 @@
 # 1. Introduction
 >>This repository is the original SIFT algorithm implemented by Matlab.
 
-![image](https://github.com/lh9171338/SIFT/blob/master/image/image_result.jpg)  
+![image](https://github.com/lh9171338/Spherical-Hough-Transform/blob/main/SphericalHoughTransform/image/figure.png)  
 
 # 2. Requirements
 * opencv-4.0.0
 * opencv_contrib-4.0.0
+
+The code is written and tested in Visual Studio 2019.
