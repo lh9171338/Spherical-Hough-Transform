@@ -2,7 +2,7 @@
 ===
 
 # 1. Introduction
-This repository is the spherical Hough transform algorithm implemented in Windows. You can also access the [Linux version](https://github.com/lh9171338/Spherical-Hough-Transform/tree/Linux).
+This repository is the spherical Hough transform algorithm implemented in Windows, and you can also access the [Linux version](https://github.com/lh9171338/Spherical-Hough-Transform/tree/Linux).
 
 ![image](https://github.com/lh9171338/Spherical-Hough-Transform/blob/main/SphericalHoughTransform/image/figure.png)  
 
