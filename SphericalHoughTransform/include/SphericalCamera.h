@@ -14,7 +14,7 @@ namespace sphericalcamera {
 
 struct FisheyeIntrinsic {
 	Matx33d cameraMatrix;
-	Vec4d distCoeffs;
+	Matx14d distCoeffs;
 };
 
 struct SphericalIntrinsic {
@@ -33,6 +33,8 @@ void ReProjectFisheyePoints(vector<Point3f>& p3ds, vector<Point2f>& p2ds, Fishey
 void ProjectFisheyeImage(const Mat& image, vector<PointCloud>& pointClouds, FisheyeIntrinsic intrinsic, bool frontFlag = true);
 void ReProjectFisheyeImage(Mat& image, vector<PointCloud>& pointClouds, FisheyeIntrinsic intrinsic, bool frontFlag = true, 
 	Scalar color = Scalar(0, 0, 255), int thickness = 1);
+
+void ProjectFisheyeEdge(const Mat& edge, vector<Point3f>& p3ds, FisheyeIntrinsic intrinsic);
 
 /************************** Spherical Camera **************************/
 void FoldSphericalImage(const Mat& srcImg, Mat& dstImg0, Mat& dstImg1, const float FOV);

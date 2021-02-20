@@ -291,6 +291,26 @@ void ReProjectFisheyeImage(
 	image.setTo(color, mask);
 }
 
+void ProjectFisheyeEdge(
+	const Mat& edge,
+	vector<Point3f>& p3ds,
+	FisheyeIntrinsic intrinsic
+)
+{
+	int rows = edge.rows;
+	int cols = edge.cols;
+	vector<Point2f> p2ds;
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			uchar value = edge.at<uchar>(i, j);
+			if (value)
+				p2ds.push_back(Point2f(j, i));
+		}
+	}
+
+	ProjectFisheyePoints(p2ds, p3ds, intrinsic);
+}
+
 /************************** Spherical Camera **************************/
 void FoldSphericalImage(
 	const Mat& srcImg,
